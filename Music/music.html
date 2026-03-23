@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="stylesheets/music.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome/css/font-awesome.css">
+    <!--         <link rel="stylesheet" type="text/css" href="stylesheets/dist/css/bootstrap.css"> -->
+</head>
+
+<body>
+    <div class="container" onclick="audio_controls();">
+        <img src="images/1.jpg" id="img">
+        <div class="control" id="btn">
+            <i class="fa fa-play fa-1x"></i>
+        </div>
+        <audio src="music/花たん - 自傷無色.mp3" id="audio" controls="controls"></audio>
+        <br/>
+        <!-- <button onclick="audio_controls();">▶</button> -->
+    </div>
+    <script type="text/javascript" charset="utf-8">
+    window.onload = function() {
+        var img = document.getElementById("img");
+        img.style.animationPlayState = "paused";
+    }
+    var i = 0;
+
+    function audio_controls() {
+        var img = document.getElementById("img");
+        var audio = document.getElementById("audio");
+        var btn = document.getElementById("btn");
+        if (i == 0) {
+            audio.play();
+            i = 1;
+            btn.innerHTML = "<i class='fa fa-pause fa-1x'>";
+            img.style.animationPlayState = "running";
+            setInterval(function() {
+                audio.play();
+            }, 220000);
+        } else if (i == 1) {
+            audio.pause();
+            i = 0;
+            btn.innerHTML = "<i class='fa fa-play fa-1x'>";
+            img.style.animationPlayState = "paused";
+        }
+    }
+    </script>
+</body>
+
+</html>
