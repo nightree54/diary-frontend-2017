@@ -9,10 +9,10 @@ Bootstrapを用いて開発した日記Webフロントエンド（2017年）。
 ## 画面イメージ
 
 ### ログイン画面
-![Login Page](.screenshots/screenshot-diary-page.png)
+![Login Page](./screenshots/screenshot-diary-page.png)
 
 ### 日記画面
-![Diary Page](.screenshots/screenshot-login-page.png)
+![Diary Page](./screenshots/screenshot-login-page.png)
 
 ---
 
